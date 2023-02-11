@@ -1,0 +1,13 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: orderservice
+logging:
+  level:
+    com.cloud: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+feign:
+  okhttp:
+    enabled: true  # 支持okhttp的开关

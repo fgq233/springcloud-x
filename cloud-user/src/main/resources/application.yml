@@ -1,0 +1,10 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: userservice
+logging:
+  level:
+    com.cloud: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS

@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://userservice
+          predicates:
+            - Path=/user/**
+
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/order/**
+logging:
+  level:
+    com.cloud: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+
